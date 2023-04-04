@@ -1,0 +1,105 @@
+/* Global styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Center the app on the page */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Add a box shadow to the app */
+.app-container {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Add some spacing to form fields */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Add a margin to the "Add" buttons */
+.add-button {
+  margin-top: 10px;
+}
+
+/* Style the tag input field */
+.tag-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.tag-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.tag-input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.tag-input::placeholder {
+  color: #ccc;
+}
+
+/* Style the tags */
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  opacity: 0.8;
+}
+
+/* Style the tag delete button */
+.tag-delete {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tag-delete:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Hide the tag delete button when the tag is not hovered */
+.tag:hover .tag-delete {
+  display: block;
+}
+
+.tag:not(:hover) .tag-delete {
+  display: none;
+}
